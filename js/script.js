@@ -44,6 +44,15 @@ const app = Vue.createApp({
                 this.activeIndex = this.arrImages.length - 1;
             }
         },
+    },
+    created() {
+        setInterval(() => {
+            this.activeIndex++;
+            if (this.activeIndex >= this.arrImages.length) {
+                this.activeIndex = 0;
+            }
+        }, 3000);
+        
     }
 });
 
