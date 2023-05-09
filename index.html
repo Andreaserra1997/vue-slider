@@ -28,7 +28,7 @@
                     <div @click="showPrevCard" class="prev"></div>
                     <div @click="showNextCard" class="next"></div>
                     <div class="thumb active">
-                        <img v-for="card in arrImages" :src="card.image"/>
+                        <img v-for="(card, i) in arrImages" :src="card.image" @click="setActiveIndex(i)"/>
                     </div>
                     
                 </div>
